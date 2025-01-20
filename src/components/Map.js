@@ -1,15 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Draw } from "ol/interaction";
+import VectorSource from "ol/source/Vector";
+import VectorLayer from "ol/layer/Vector";
+import PopUpModal from "./PopUp";
+import CoordinateModal from "./CoordinateModal";
+import { useGeographic } from "ol/proj.js";
+import { Button } from "@mui/material";
 import "ol/ol.css";
 import { Map, View } from "ol";
 import TileLayer from "ol/layer/Tile";
 import OSM from "ol/source/OSM";
-import { Draw } from "ol/interaction";
-import VectorSource from "ol/source/Vector";
-import VectorLayer from "ol/layer/Vector";
-import PopUpModal from "./PopUpModal";
-import CoordinateModal from "./CoordinateModal";
-import { useGeographic } from "ol/proj.js";
-import { Button } from "@mui/material";
+
 
 const MapComponent = () => {
   useGeographic();

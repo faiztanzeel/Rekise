@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CoordinateInfo from "./CoordinateInfo";
+import CoordinateInfo from "./CoordInfo";
 import {
   Dialog,
   DialogContent,
@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import PolygonRow from "./PolygonRow";
+import PolygonRow from "./Polygon";
 
 const CoordinateModal = ({ drawData, handlePolygonDrawing }) => {
   const [open, setOpen] = useState(false);

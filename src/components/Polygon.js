@@ -54,6 +54,9 @@ const PolygonRow = ({
               handlePolygonDrawing("before", index);
             }}
           >
+            {/* <span class="material-symbols-outlined">
+          arrow_left_alt
+          </span> */}
             Insert Polygon Before
           </MenuItem>
           <MenuItem
@@ -62,6 +65,9 @@ const PolygonRow = ({
               handlePolygonDrawing("after", index);
             }}
           >
+          // <span class="material-symbols-outlined">
+          // arrow_right_alt
+          // </span>
             Insert Polygon After
           </MenuItem>
         </Menu>
