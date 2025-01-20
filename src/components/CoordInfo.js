@@ -41,7 +41,7 @@ const CoordinateInfo = ({
         <TableCell>{String(index + 1).padStart(2, "0")}</TableCell>
         <TableCell>{Array.isArray(data) ? data.join(", ") : "N/A"}</TableCell>
         <TableCell>
-          {coord1 && coord1.type != "polygon"
+          {coord1 && coord1.type !== "polygon"
             ? getDistance(data, coord1).toFixed(1)
             : "N/A"}
         </TableCell>

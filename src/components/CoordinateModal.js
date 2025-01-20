@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
 import CoordinateInfo from "./CoordInfo";
+// import Box from "@mui/material/Box";
+// import Button from "@mui/material/Button";
+// import {PopUpModal} from './PopUp';
+// import{handleGenerateData} from './Map'
+
 import {
   Dialog,
   DialogContent,
@@ -57,6 +62,8 @@ const CoordinateModal = ({ drawData, handlePolygonDrawing }) => {
         PaperProps={{
           style: {
             position: "absolute",
+            boxShadow: 24,
+            borderRadius: "28px",
             top: isMobile ? "auto" : "20px",
             left: isMobile ? "auto" : "20px",
             padding: "24px 0",
@@ -74,14 +81,14 @@ const CoordinateModal = ({ drawData, handlePolygonDrawing }) => {
         <DialogContent style={{ pointerEvents: "auto" }}>
           <TableContainer>
             <Table>
-              <TableHead>
-                <TableRow>
+              <TableHead >
+                <TableRow >
                   <TableCell>
                     <Checkbox />
                   </TableCell>
-                  <TableCell>WP</TableCell>
-                  <TableCell>Coordinates</TableCell>
-                  <TableCell>Distance (m)</TableCell>
+                  <TableCell><strong>WP</strong></TableCell>
+                  <TableCell><strong>Coordinates</strong></TableCell>
+                  <TableCell><strong>Distance (m)</strong></TableCell>
                   <TableCell><span class="material-symbols-outlined">
 upload
 </span></TableCell>
@@ -111,7 +118,16 @@ upload
             </Table>
           </TableContainer>
         </DialogContent>
-      </Dialog>
+      </Dialog>      
+      {/* <Box display="flex" justifyContent="flex-end" mt={2}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleGenerateData}
+          >
+            Generate Data
+          </Button>
+        </Box> */}
     </div>
   );
 };

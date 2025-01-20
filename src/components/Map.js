@@ -115,7 +115,7 @@ const MapComponent = () => {
     <>
       <Button
         variant="contained"
-        sx={{ width: "11%" }}
+        sx={{ width: "13%" }}
         color="primary"
         onClick={startDrawing}
       >
@@ -129,6 +129,7 @@ const MapComponent = () => {
       <CoordinateModal
         drawData={drawData}
         handlePolygonDrawing={handlePolygonDrawing}
+        
       />
       <PopUpModal
         open={isModalOpen}
