@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 import CoordinateInfo from "./CoordInfo";
-// import Box from "@mui/material/Box";
-// import Button from "@mui/material/Button";
-// import {PopUpModal} from './PopUp';
-// import{handleGenerateData} from './Map'
-
 import {
   Dialog,
   DialogContent,
@@ -34,7 +29,6 @@ const CoordinateModal = ({ drawData, handlePolygonDrawing }) => {
   }, [drawData]);
 
   const handleClose = () => setOpen(false);
-
   const handleOpen = () => setOpen(true);
 
   return (
@@ -89,7 +83,7 @@ const CoordinateModal = ({ drawData, handlePolygonDrawing }) => {
                   <TableCell><strong>WP</strong></TableCell>
                   <TableCell><strong>Coordinates</strong></TableCell>
                   <TableCell><strong>Distance (m)</strong></TableCell>
-                  <TableCell><span class="material-symbols-outlined">
+                  <TableCell><span className="material-symbols-outlined">
 upload
 </span></TableCell>
                 </TableRow>
@@ -119,15 +113,6 @@ upload
           </TableContainer>
         </DialogContent>
       </Dialog>      
-      {/* <Box display="flex" justifyContent="flex-end" mt={2}>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleGenerateData}
-          >
-            Generate Data
-          </Button>
-        </Box> */}
     </div>
   );
 };
