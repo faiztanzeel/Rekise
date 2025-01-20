@@ -20,3 +20,21 @@
 .modal-content h2 {
   margin-top: 0;
 }
+.mission-box-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 29px 5px;
+}
+
+.generate-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px 5px 14px;
+  cursor: pointer;
+}
+
+.generate-button:hover {
+  background: #0056b3;
+}

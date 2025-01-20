@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import './../App.css';
+import Typography from "@mui/material/Typography";
+import { Paper } from "@mui/material";
 import CoordinateInfo from "./CoordInfo";
 import {
   Dialog,
@@ -67,11 +70,16 @@ const CoordinateModal = ({ drawData, handlePolygonDrawing }) => {
           },
         }}
       >
+        <Paper
+            elevation={2}
+            sx={{ p: 2, mt: 2, border: 0.5, borderColor: "grey.200" }}
+          >
         <DialogTitle sx={{ 
-          backgroundColor: '#f0f0f0',
+          // backgroundColor: '#f0f0f0',
           color: '#333', 
-          padding: '16px 24px'
-        }}>Mission Creation</DialogTitle>
+          padding: '16px 24px',
+          
+        }}>Mission Creation</DialogTitle></Paper>
         <DialogContent style={{ pointerEvents: "auto" }}>
           <TableContainer>
             <Table>
@@ -112,7 +120,20 @@ upload
             </Table>
           </TableContainer>
         </DialogContent>
+        <Paper
+            elevation={2}
+            sx={{ p: 2, mt: 2, border: 0.5, borderColor: "grey.200" }}
+          >
+            <Typography>
+            Click on the map to mark points of the route and then press ↩ complete the route.
+            </Typography>
+          </Paper>
+        <div className="mission-box-footer">
+        <button className="generate-button">Generate Data</button>
+      </div>
+
       </Dialog>      
+      
     </div>
   );
 };
